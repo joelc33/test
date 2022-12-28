@@ -1,0 +1,17 @@
+.contenedor-form {
+    width: 700px;
+    height: 600px;
+    margin: 10px 10px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 0 3px 13px 1px rgb(0 0 0 /9%);
+
+}
+
+html, 
+body{
+   font-size: 18;
+   background-color:#f5f6f7;
+}

@@ -1,0 +1,121 @@
+.Table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    height: 368px;
+    margin: 10px 10px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 0 3px 13px 1px rgb(0 0 0 /9%);
+}
+
+html, 
+body{
+   font-size: 18;
+   background-color:#f5f6f7;
+}
+
+
+.contenedor-principal {
+    min-height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.contenedor-form {
+    width: 2170px;
+    height: 368px;
+    margin: 10px 10px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 0 3px 13px 1px rgb(0 0 0 /9%);
+
+}
+
+
+
+.Table {
+
+    display: table;
+
+}
+
+.Title {
+
+    display: table-caption;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    font-size: larger;
+
+}
+
+.Heading {
+
+    display: table-row;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #D4d4d4;
+    color: white;
+
+}
+
+.Row {
+
+    display: table-row;
+
+}
+
+.Cell {
+
+    display: table-cell;
+
+    border: solid;
+
+    border-width: thin;
+
+    padding-left: 5px;
+
+    padding-right: 5px;
+
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+
+}
+
+tarea-icono {
+    width: 50px;
+    height: 25px;
+    margin: 5px;
+
+}
+Table
+div label {
+    width: 25%;
+    float: left;
+  }
+
+  form.elegante input {
+    padding: .2em;
+  }
+
+  input:focus {
+    border: 2px solid #000;
+    background: #F3F3F3;
+  }
