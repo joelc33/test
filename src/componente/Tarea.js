@@ -47,6 +47,8 @@ function Tarea() {
     );
     listaElementos.splice(IndexElementeInArray, 1);
     localStorage.setItem("tareas", JSON.stringify(listaElementos));
+    setResult(listaElementos);
+
     navigate("/");
   }
 
