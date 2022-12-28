@@ -7,34 +7,36 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Form from "react-bootstrap/Form";
 
 function Tarea() {
-  const listaElementos = JSON.parse(localStorage.getItem("tareas"));
+  var listaElementos = JSON.parse(localStorage.getItem("tareas"));
+  if (!listaElementos) listaElementos = [];
   const [busqueda, setBusqueda] = useState("");
-  const [result, setResult] = useState(listaElementos);  
-  const navigate = useNavigate(); 
+  const [result, setResult] = useState(listaElementos);
+  const navigate = useNavigate();
   function newTask() {
     navigate("/new");
   }
   const [, updateState] = React.useState();
   const forceUpdate = React.useCallback(() => updateState({}), []);
 
-  function buscarTarea(text) { 
-    console.log("buscarTarea")
-    if(text.length > 0) {
+  function buscarTarea(text) {
+    console.log("buscarTarea");
+    if (text.length > 0) {
       let data = listaElementos.filter(
-        (element) => element.id.includes(text) || element.descripcion.includes(text)
-      )
-      setResult(data)
+        (element) =>
+          element.id.includes(text) || element.descripcion.includes(text)
+      );
+      setResult(data);
     } else {
-      setResult(listaElementos)
-      console.log("result vacio")
-    }  
-    
-    console.log(result)
+      setResult(listaElementos);
+      console.log("result vacio");
+    }
+
+    console.log(result);
   }
 
   function onChange(item) {
-    setBusqueda(item.value)
-    buscarTarea(item.value) 
+    setBusqueda(item.value);
+    buscarTarea(item.value);
   }
 
   function deleteElement(id) {
@@ -63,7 +65,7 @@ function Tarea() {
           </th>
           <th>
             <Form.Group className="mb-6" controlId="busqueda">
-            <Form.Label>Busqueda</Form.Label>
+              <Form.Label>Busqueda</Form.Label>
               <Form.Control
                 type="text"
                 name="buscar"
@@ -71,11 +73,9 @@ function Tarea() {
               />
             </Form.Group>
           </th>
-          <th>
-            
-          </th>
+          <th></th>
         </tr>
-        <tr>          
+        <tr>
           <th>ID</th>
           <th>Descripcion</th>
           <th>Fecha Terminacion</th>
